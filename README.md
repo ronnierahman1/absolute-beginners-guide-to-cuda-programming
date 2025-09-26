@@ -1,7 +1,7 @@
 
 
-````markdown
-# Absolute Beginner’s Guide to CUDA Programming
+
+Absolute Beginner’s Guide to CUDA Programming
 
 This repository is the official companion to the book **“Absolute Beginner’s Guide to CUDA Programming.”**  
 It provides a chapter-by-chapter structure where you can find example programs, exercises, and notes that align with the book’s content.  
@@ -37,7 +37,7 @@ How to Use This Repository
 
 ---
 
-## Requirements
+Requirements
 
 * NVIDIA GPU with CUDA support
 * CUDA Toolkit (see setup instructions in the book for [Linux](docs/CUDA_setup_linux.md) and [Windows](docs/CUDA_setup_windows.md))
@@ -45,7 +45,7 @@ How to Use This Repository
 
 ---
 
-## License
+License
 
 This repository is licensed under the [MIT License](LICENSE).
 You are free to use, modify, and share the code for learning and development.
