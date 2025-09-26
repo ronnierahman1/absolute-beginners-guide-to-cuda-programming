@@ -30,12 +30,12 @@ How to Use This Repository
 1. Clone the repository:  
    ```bash
    git clone https://github.com/ronnierahman1/absolute-beginners-guide-to-cuda-programming.git
-````
+   ````
 
 2. Navigate into any chapter folder to explore code, exercises, and notes.
 3. Follow along with the book to run examples and complete exercises.
 
----
+
 
 Requirements
 
@@ -50,6 +50,3 @@ License
 This repository is licensed under the [MIT License](LICENSE).
 You are free to use, modify, and share the code for learning and development.
 
----
-
-```
