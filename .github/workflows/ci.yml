@@ -1,0 +1,11 @@
+﻿name: build-and-test
+on:
+  pull_request: { branches: [ "main" ] }
+  push:         { branches: [ "main" ] }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder
+        run: echo "Add CUDA build later"
