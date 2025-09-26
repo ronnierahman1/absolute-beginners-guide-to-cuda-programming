@@ -1,4 +1,4 @@
-Here’s a clean **root README.md draft** you can drop into your new repo:
+
 
 ````markdown
 # Absolute Beginner’s Guide to CUDA Programming
@@ -9,7 +9,7 @@ The goal is to make learning CUDA simple, practical, and fun.
 
 ---
 
-## 📖 Table of Contents
+Table of Contents
 
 - [Chapter 0 – Introduction](Chapter_0_Introduction/)
 - [Chapter 1 – Hello, GPU!](Chapter_1_Hello_GPU/)
@@ -25,7 +25,7 @@ The goal is to make learning CUDA simple, practical, and fun.
 
 ---
 
-## 🚀 How to Use This Repository
+How to Use This Repository
 
 1. Clone the repository:  
    ```bash
@@ -37,7 +37,7 @@ The goal is to make learning CUDA simple, practical, and fun.
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 * NVIDIA GPU with CUDA support
 * CUDA Toolkit (see setup instructions in the book for [Linux](docs/CUDA_setup_linux.md) and [Windows](docs/CUDA_setup_windows.md))
@@ -45,7 +45,7 @@ The goal is to make learning CUDA simple, practical, and fun.
 
 ---
 
-## 📜 License
+## License
 
 This repository is licensed under the [MIT License](LICENSE).
 You are free to use, modify, and share the code for learning and development.
