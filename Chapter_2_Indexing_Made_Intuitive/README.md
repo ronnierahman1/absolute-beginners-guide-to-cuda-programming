@@ -36,7 +36,7 @@ You will learn how to calculate thread indices, protect against out-of-bounds me
 ```bash
 # Build all programs into ./bin
 make
-````
+```
 
 ### Windows (Batch)
 
