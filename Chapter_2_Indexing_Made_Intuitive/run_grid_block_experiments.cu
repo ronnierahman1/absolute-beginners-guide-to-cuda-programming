@@ -134,7 +134,7 @@ std::vector<int> parse_csv_ints(const std::string& csv) {
 // Print a short banner explaining coverage
 // -------------------------------------
 void print_coverage_summary(int N, int TPB, int blocks) {
-    long long totalThreads = 1LL * TPB * blocks;
+    long long totalThreads = static_cast<long long>(TPB) * blocks;
     printf("Config: N=%d, TPB=%d, blocks=%d  -> totalThreads=%lld\n",
            N, TPB, blocks, totalThreads);
 
