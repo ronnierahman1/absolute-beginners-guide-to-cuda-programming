@@ -267,7 +267,9 @@ int main(int argc, char** argv) {
     // for the first TPB (if auto blocks would normally cover N).
     if (!TPB_list.empty()) {
         int TPB = TPB_list.front();
-        int too_few_blocks = std::max(1, (N + TPB - 1) / TPB - 1); // one fewer than needed
+        // Intentionally launch one fewer block than needed to cover all elements (undersubscription),
+        // but ensure at least one block is launched (avoiding zero blocks).
+        int too_few_blocks = std::max(1, (N + TPB - 1) / TPB - 1);
         printf("=== Intentional UNDERSUBSCRIPTION demo ===\n");
         run_experiment(N, TPB, too_few_blocks, /*auto_blocks=*/false);
     }
