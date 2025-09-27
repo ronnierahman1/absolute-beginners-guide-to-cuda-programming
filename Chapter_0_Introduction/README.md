@@ -8,6 +8,7 @@ This folder contains code examples, exercises, and resources for Chapter 0 of "A
 - Basic concepts and terminology
 
 ## Contents
+
 # Hello CUDA — Minimal Kernel Demo
 
 This tiny program verifies your CUDA setup by compiling and launching the smallest possible GPU kernel that prints a message. It is a safe first step to confirm that your compiler, driver, and device are working together.
