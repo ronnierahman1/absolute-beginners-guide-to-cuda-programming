@@ -48,7 +48,7 @@ set EXE_GRID=%BIN%\grid_expts.exe
 REM ---- Ensure nvcc is available ----
 where %NVCC% >nul 2>nul
 if errorlevel 1 (
-  echo [ERROR] nvcc not found. Add it to PATH or set NVCC="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\vXX.X\bin\nvcc.exe"
+  echo [ERROR] nvcc not found. Add it to PATH or set NVCC="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\vNN.N\bin\nvcc.exe" (e.g., v12.0 or v11.8)
   exit /b 1
 )
 
