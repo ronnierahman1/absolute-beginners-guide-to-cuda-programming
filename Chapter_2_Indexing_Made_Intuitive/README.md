@@ -1,3 +1,4 @@
+
 # Chapter 2: Indexing Made Intuitive
 
 This folder contains code examples, exercises, and resources for Chapter 2 of "Absolute Beginner's Guide to CUDA Programming."
