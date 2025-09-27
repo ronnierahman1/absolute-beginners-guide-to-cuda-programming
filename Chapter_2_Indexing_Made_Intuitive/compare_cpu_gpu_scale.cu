@@ -74,33 +74,40 @@ __global__ void scale10x5_gpu(const float* __restrict__ x,
 // -----------------------------
 // Compares y_cpu vs y_gpu element-wise with a small tolerance for floats.
 // Reports up to 'max_report' mismatches.
-bool compare_results(const float* y_cpu,
-                     const float* y_gpu,
+
+bool compare_results(const float* a,
+                     const float* b,
                      int N,
                      float tol = 1e-5f,
                      int max_report = 10)
 {
     bool pass = true;
-    int reported = 0;
+    int reported = 0;        // how many we printed
+    int total_mismatches = 0; // how many we actually saw
+
     for (int i = 0; i < N; ++i) {
-        float diff = std::fabs(y_cpu[i] - y_gpu[i]);
+        float diff = fabsf(a[i] - b[i]);
         if (diff > tol) {
+            ++total_mismatches;
             if (reported < max_report) {
                 printf("Mismatch at %d: CPU=%f, GPU=%f, |diff|=%f\n",
-                       i, y_cpu[i], y_gpu[i], diff);
+                       i, a[i], b[i], diff);
                 ++reported;
             }
             pass = false;
         }
     }
 
-    if (!pass && reported < max_report) {
-        // If there were more mismatches than we printed, hint at it.
-        printf("... additional mismatches not shown (limit %d)\n", max_report);
+    // Only print the "additional mismatches" line if we *know*
+    // there were more mismatches than we reported.
+    if (!pass && total_mismatches > reported) {
+        printf("... additional mismatches not shown (reported %d of %d; limit %d)\n",
+               reported, total_mismatches, max_report);
     }
 
     return pass;
 }
+
 
 // -----------------------------
 // Main
