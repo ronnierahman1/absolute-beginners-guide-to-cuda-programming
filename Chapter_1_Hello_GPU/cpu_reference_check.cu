@@ -47,9 +47,9 @@ static inline bool CUDA_OK(cudaError_t err, const char* where) {
 // ---------------------------
 __global__ void recordGreeting(int* out, int N) {
     // Compute a unique global thread ID:
-    // - threadIdx.x  : thread number inside its block (0..blockDim.x-1)
-// - blockIdx.x    : block number inside the grid  (0..gridDim.x-1)
-// - blockDim.x    : threads per block
+    // - threadIdx.x   : thread number inside its block (0..blockDim.x-1)
+    // - blockIdx.x    : block number inside the grid  (0..gridDim.x-1)
+    // - blockDim.x    : threads per block
     int tid = threadIdx.x + blockIdx.x * blockDim.x;
 
     // Safety: only write if tid is a valid index (0..N-1)

@@ -1,6 +1,3 @@
-Here’s a fully revised **README.md** for your Chapter 2 folder. It now includes all four programs with clear run instructions for both Linux/macOS and Windows.
-
-````markdown
 # Chapter 2 – Indexing Made Intuitive
 
 This chapter introduces one of the most important concepts in CUDA programming: **mapping threads to data safely and correctly**.  
@@ -8,7 +5,7 @@ You will learn how to calculate thread indices, protect against out-of-bounds me
 
 ---
 
-## 📂 Contents
+## Contents
 
 ### Source Programs
 - **`vector_scale_10x_plus_5.cu`**  
@@ -33,7 +30,7 @@ You will learn how to calculate thread indices, protect against out-of-bounds me
 
 ---
 
-## ▶️ Building the Programs
+## Building the Programs
 
 ### Linux / macOS (Make)
 ```bash
@@ -50,7 +47,7 @@ ch2_build.bat
 
 ---
 
-## ▶️ Running the Programs
+## Running the Programs
 
 ### 1) Minimal vector scale
 
@@ -102,7 +99,7 @@ ch2_build.bat run-grid 17 "4,8,16 3"
 
 ---
 
-## 🧪 What You Will Learn
+## What You Will Learn
 
 By completing this chapter, you will:
 
@@ -116,7 +113,7 @@ By completing this chapter, you will:
 
 ---
 
-## 📌 Suggested Experiments
+## Suggested Experiments
 
 1. Change `N` in the code (e.g., 10, 17, 1000) and observe thread coverage.
 2. Remove the `if (i < N)` check in `too_many_threads_demo.cu` and note the differences.
@@ -126,7 +123,7 @@ By completing this chapter, you will:
 
 ---
 
-## ✅ Checklist
+## Checklist
 
 * [ ] I can explain how the global index is calculated.
 * [ ] I know why `if (i < N)` is required.
