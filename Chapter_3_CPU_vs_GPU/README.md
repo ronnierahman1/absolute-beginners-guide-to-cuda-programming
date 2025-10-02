@@ -1,3 +1,5 @@
+
+```markdown
 # Chapter 3 — Talk to the GPU (CUDA for Absolute Beginners)
 
 This chapter teaches the end-to-end CUDA workflow by building a simple but canonical program: **vector addition (C = A + B)**. You’ll learn how host (CPU) and device (GPU) memory differ, how to allocate/copy/free device memory, how to launch a kernel, how to add robust error checking, and how to verify GPU results against a CPU reference.
@@ -102,7 +104,7 @@ nvcc device_alloc_free.cu -o device_alloc_free
 ./device_alloc_free 50000000  # custom N
 ````
 
-**You should see:** Memory drop after allocation and return after free.
+**Expected output:** Memory drop after allocation and return after free.
 
 ````
 
@@ -164,11 +166,11 @@ nvcc vector_add_minimal.cu -o vector_add_minimal
 **Purpose:** Teach the **five-step CUDA workflow** as structure.
 
 **Five steps shown:**
-1) Allocate (device)  
-2) Copy (to device)  
-3) Compute (kernel)  
-4) Copy back (to host)  
-5) Free (device)
+1. Allocate (device)  
+2. Copy (to device)  
+3. Compute (kernel)  
+4. Copy back (to host)  
+5. Free (device)
 
 **Build/Run:**
 ```bash
