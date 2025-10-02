@@ -1,5 +1,5 @@
 @echo off
-setlocal ENABLEDELAYEDEXECUTION
+setlocal ENABLEDELAYEDEXPANSION
 setlocal ENABLEEXTENSIONS
 
 rem ============================================================
@@ -32,8 +32,8 @@ rem -------- Parse key=value args and single-target arg --------
 set "SINGLE_TARGET="
 
 for %%A in (%*) do (
-  echo %%A | findstr /b /c:"ARCH=" >nul  && (for /f "tokens=2 delims==" %%X in ("%%A") do set "ARCH=%%~X" & goto :cont) &:cont
-  echo %%A | findstr /b /c:"MODE=" >nul  && (for /f "tokens=2 delims==" %%X in ("%%A") do set "MODE=%%~X" & goto :cont2) &:cont2
+  echo %%A | findstr /b /c:"ARCH=" >nul  && (for /f "tokens=2 delims==" %%X in ("%%A") do set "ARCH=%%~X" & goto :continue_arch) &:continue_arch
+  echo %%A | findstr /b /c:"MODE=" >nul  && (for /f "tokens=2 delims==" %%X in ("%%A") do set "MODE=%%~X" & goto :continue_mode) &:continue_mode
 )
 
 rem If the last non key=value token is present, treat as SINGLE_TARGET / verb
