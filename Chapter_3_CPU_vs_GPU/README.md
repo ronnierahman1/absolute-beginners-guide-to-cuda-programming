@@ -1,4 +1,4 @@
-# Chapter 3 — Talk to the GPU (CUDA for Absolute Beginners)
+# Chapter 3 - Talk to the GPU (CUDA for Absolute Beginners)
 
 This chapter teaches the end-to-end CUDA workflow by building a simple but canonical program: **vector addition (C = A + B)**. You’ll learn how host (CPU) and device (GPU) memory differ, how to allocate/copy/free device memory, how to launch a kernel, how to add robust error checking, and how to verify GPU results against a CPU reference.
 
