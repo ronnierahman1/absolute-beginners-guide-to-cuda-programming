@@ -18,8 +18,6 @@ Chapter_3_Talk_to_the_GPU/
 ├── Makefile
 └── build_ch3.bat
 
-````
-
 ## Prerequisites
 
 - **CUDA Toolkit** installed (nvcc in PATH)
@@ -102,6 +100,7 @@ nvcc device_alloc_free.cu -o device_alloc_free
 ./device_alloc_free 50000000  # custom N
 ````
 
+**Expected output:** Memory drop after allocation and return after free.
 **You should see:** Memory drop after allocation and return after free.
 
 ````
@@ -164,11 +163,11 @@ nvcc vector_add_minimal.cu -o vector_add_minimal
 **Purpose:** Teach the **five-step CUDA workflow** as structure.
 
 **Five steps shown:**
-1) Allocate (device)  
-2) Copy (to device)  
-3) Compute (kernel)  
-4) Copy back (to host)  
-5) Free (device)
+1. Allocate (device)  
+2. Copy (to device)  
+3. Compute (kernel)  
+4. Copy back (to host)  
+5. Free (device)
 
 **Build/Run:**
 ```bash
