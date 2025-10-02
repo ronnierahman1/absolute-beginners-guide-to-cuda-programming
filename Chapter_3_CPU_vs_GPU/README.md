@@ -18,7 +18,6 @@ Chapter_3_Talk_to_the_GPU/
 ├── Makefile
 └── build_ch3.bat
 
-````
 
 ## Prerequisites
 
