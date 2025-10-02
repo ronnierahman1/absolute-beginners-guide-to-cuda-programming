@@ -1,14 +1,15 @@
-# Chapter 0: Introduction
 
-This folder contains code examples, exercises, and resources for Chapter 0 of "Absolute Beginner's Guide to CUDA Programming."
+# Chapter 0: Introduction and Environment Check
 
-## Chapter Topics
-- Introduction to CUDA programming
-- Setting up the development environment
-- Basic concepts and terminology
+Welcome to the CUDA Programming Guide! This guide is designed to help you learn GPU programming with CUDA, starting from the basics and progressing to more advanced topics. Each chapter builds on the previous one, providing hands-on examples and clear explanations.
 
-## Contents
+**Chapter 0** serves as a quick introduction and environment check. Before diving into CUDA programming concepts, it's important to ensure your system is correctly set up. In this chapter, you'll:
 
+- Learn the purpose and structure of this guide.
+- Verify your CUDA installation and toolchain with a minimal working example.
+- Gain confidence that your hardware and software are ready for the upcoming chapters.
+
+---
 # Hello CUDA — Minimal Kernel Demo
 
 This tiny program verifies your CUDA setup by compiling and launching the smallest possible GPU kernel that prints a message. It is a safe first step to confirm that your compiler, driver, and device are working together.
