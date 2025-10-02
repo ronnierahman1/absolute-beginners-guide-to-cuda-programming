@@ -9,11 +9,11 @@ REM   - poly_45_precision.cu         -> bin\poly45.exe
 REM   - poly_46_testing.cu           -> bin\poly46.exe
 REM
 REM Usage:
-REM   build.bat                      and builds all
-REM   build.bat run44                and builds + runs poly44
-REM   build.bat run45
-REM   build.bat run46
-REM   build.bat clean
+REM   build_ch4.bat                      and builds all
+REM   build_ch4.bat run44                and builds + runs poly44
+REM   build_ch4.bat run45
+REM   build_ch4.bat run46
+REM   build_ch4.bat clean
 REM
 REM Options (key=value anywhere on the command line):
 REM   ARCH=sm_80 | sm_86 | sm_90 ...
@@ -21,9 +21,9 @@ REM   DEBUG=0|1          (1 uses -G -g -O0 for device debug)
 REM   FAST_MATH=0|1      (1 adds -use_fast_math for float)
 REM   CXXSTD=c++17       (host C++ standard)
 REM Examples:
-REM   build.bat ARCH=sm_86
-REM   build.bat run45 FAST_MATH=1
-REM   build.bat DEBUG=1
+REM   build_ch4.bat ARCH=sm_86
+REM   build_ch4.bat run45 FAST_MATH=1
+REM   build_ch4.bat DEBUG=1
 REM ============================================================
 
 REM -- Defaults (can be overridden by key=value args)
