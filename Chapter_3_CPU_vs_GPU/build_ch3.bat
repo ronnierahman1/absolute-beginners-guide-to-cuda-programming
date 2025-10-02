@@ -1,5 +1,5 @@
 @echo off
-setlocal ENABLEDELAYEDEXECUTION
+setlocal ENABLEDELAYEDEXPANSION
 setlocal ENABLEEXTENSIONS
 
 rem ============================================================
