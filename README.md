@@ -1,6 +1,3 @@
-
-
-
 Absolute Beginner’s Guide to CUDA Programming
 
 This repository is the official companion to the book **“Absolute Beginner’s Guide to CUDA Programming.”**  
