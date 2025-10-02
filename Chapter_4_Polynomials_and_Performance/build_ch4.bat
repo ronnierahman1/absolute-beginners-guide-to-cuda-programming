@@ -9,8 +9,8 @@ REM   - poly_45_precision.cu         -> bin\poly45.exe
 REM   - poly_46_testing.cu           -> bin\poly46.exe
 REM
 REM Usage:
-REM   build.bat                      ^&^& builds all
-REM   build.bat run44                ^&^& builds + runs poly44
+REM   build.bat                      and builds all
+REM   build.bat run44                and builds + runs poly44
 REM   build.bat run45
 REM   build.bat run46
 REM   build.bat clean
