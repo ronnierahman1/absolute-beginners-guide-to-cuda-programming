@@ -79,7 +79,7 @@ By studying and running this program you will:
 
 * Understand how shared memory provides a fast cooperative scratchpad.
 * Learn why synchronization (`__syncthreads()`) is necessary.
-* Implement block-level reductions for min, max, argmin, and argmax.
+* Implement block-level reductions for min and argmin.
 * Write block results safely to global memory.
 * Combine partial results on the CPU to obtain a global result.
 * Debug synchronization errors that lead to random wrong answers.
