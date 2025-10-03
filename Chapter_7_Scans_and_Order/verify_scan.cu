@@ -12,12 +12,6 @@
  * - Implements block-local scan, block sum collection, and global scan via offset add.
  * - Compares both inclusive and exclusive scan results against CPU reference for a variety of patterns, sizes, and block sizes.
  */
-#include <cstdio>
-#include <cstdlib>
-#include <vector>
-#include <random>
-#include <algorithm>
-#include <cuda_runtime.h>
 
 /**
  * @brief Macro to check CUDA API calls for errors and exit on failure.
