@@ -6,7 +6,14 @@
 //
 // Prints: detected separator, header (if present), column count, and first N rows.
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <array>
+#include <cctype>
+#include <cstdlib>
 using namespace std;
 
 static char guess_sep(const string& line) {
