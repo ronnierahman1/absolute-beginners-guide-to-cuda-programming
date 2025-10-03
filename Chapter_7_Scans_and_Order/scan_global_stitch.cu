@@ -145,7 +145,6 @@ int main() {
 
     // Device buffers
 
-    // Device buffers
     int *d_in = nullptr, *d_out = nullptr, *d_blockSums = nullptr;
     CUDA_CHECK(cudaMalloc(&d_in,  N * sizeof(int)));
     CUDA_CHECK(cudaMalloc(&d_out, N * sizeof(int)));
