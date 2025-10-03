@@ -33,10 +33,15 @@
 // Skip comments in PGM files (lines starting with '#')
 // This is a simple implementation that skips lines until it finds a non-comment line.
 static void skip_comments(std::istream& in) {
-    // Skip lines starting with '#'
-    while (in.peek() == '#') {
-        std::string line;
-        std::getline(in, line);
+    // Skip lines that start with optional whitespace followed by '#'
+    while (true) {
+        in >> std::ws; // consume whitespace
+        if (in.peek() == '#') {
+            std::string line;
+            std::getline(in, line);
+        } else {
+            break;
+        }
     }
 }
 
