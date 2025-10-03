@@ -7,7 +7,17 @@
 //   ./csv_to_plot prices.csv prices_plot.csv --col-t 1 --col-y 5 --to-unix
 //   ./csv_to_plot sensor.csv sensor_plot.csv --sep auto
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <array>
+#include <ctime>
+#include <iomanip>
+#include <cstdlib>
+#include <cctype>
+#include <algorithm>
 using namespace std;
 
 static char guess_sep(const string& line) {
