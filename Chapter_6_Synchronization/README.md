@@ -10,7 +10,6 @@ This chapter introduces **shared memory** in CUDA as a “team scratchpad.” Yo
   A self-contained CUDA program that demonstrates:
 
   * Block-level minimum reduction
-  * Block-level maximum reduction
   * Block-level argmin (value + index)
   * Correct use of `__syncthreads()`
   * Writing partial results back to global memory
