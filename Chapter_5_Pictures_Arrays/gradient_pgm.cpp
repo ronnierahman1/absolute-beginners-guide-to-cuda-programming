@@ -82,21 +82,35 @@ int main(int argc, char** argv) {
     if (mode == 'h') {
         // Horizontal gradient: intensity increases from left to right
         // For each row, set pixel value based on column index
-        for (int y = 0; y < height; ++y) {
-            for (int x = 0; x < width; ++x) {
-                // Scale x into [0,255] for each column
-                unsigned char val = static_cast<unsigned char>((255.0 * x) / (width - 1));
-                img[static_cast<size_t>(y) * width + x] = val;
+        if (width == 1) {
+            // Avoid division by zero: set all pixels to 0 (black)
+            for (int y = 0; y < height; ++y) {
+                img[static_cast<size_t>(y) * width + 0] = 0;
+            }
+        } else {
+            for (int y = 0; y < height; ++y) {
+                for (int x = 0; x < width; ++x) {
+                    // Scale x into [0,255] for each column
+                    unsigned char val = static_cast<unsigned char>((255.0 * x) / (width - 1));
+                    img[static_cast<size_t>(y) * width + x] = val;
+                }
             }
         }
     } else { // mode == 'v'
         // Vertical gradient: intensity increases from top to bottom
         // For each column, set pixel value based on row index
-        for (int y = 0; y < height; ++y) {
-            // Scale y into [0,255] for each row
-            unsigned char val = static_cast<unsigned char>((255.0 * y) / (height - 1));
+        if (height == 1) {
+            // Avoid division by zero: set all pixels to 0 (black)
             for (int x = 0; x < width; ++x) {
-                img[static_cast<size_t>(y) * width + x] = val;
+                img[x] = 0;
+            }
+        } else {
+            for (int y = 0; y < height; ++y) {
+                // Scale y into [0,255] for each row
+                unsigned char val = static_cast<unsigned char>((255.0 * y) / (height - 1));
+                for (int x = 0; x < width; ++x) {
+                    img[static_cast<size_t>(y) * width + x] = val;
+                }
             }
         }
     }
