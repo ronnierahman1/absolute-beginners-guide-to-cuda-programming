@@ -1,7 +1,7 @@
 @echo off
 rem ============================================================
 rem build_ch6.bat — Chapter 6 (Teams and Scratchpads)
-rem Builds/runs chapter6_demo (min/max + argmin/argmax with shared memory)
+rem Builds/runs chapter6_demo (min + argmin with shared memory)
 rem
 rem Usage:
 rem   build_ch6.bat build           - compile the demo
