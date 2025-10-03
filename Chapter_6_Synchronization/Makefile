@@ -1,5 +1,5 @@
 # Makefile for Chapter 6 — Teams and Scratchpads
-# Builds a single demo: chapter6_demo (min/max + argmin/argmax with shared memory)
+# Builds a single demo: chapter6_demo (min + argmin with shared memory)
 
 # ----- Toolchain -----
 NVCC    ?= nvcc
