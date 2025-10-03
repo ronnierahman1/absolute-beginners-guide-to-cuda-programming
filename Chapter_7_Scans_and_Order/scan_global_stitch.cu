@@ -10,9 +10,6 @@
  * - Second pass: add per-block offsets to produce a global scan
  * - Includes CPU reference for verification
  */
-#include <cstdio>
-#include <vector>
-#include <cuda_runtime.h>
 
 /**
  * @brief Macro to check CUDA API calls for errors and exit on failure.
