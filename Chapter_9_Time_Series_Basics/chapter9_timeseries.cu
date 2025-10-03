@@ -203,15 +203,15 @@ inline CsvArgs parse_csv_args(int argc, char** argv) {
     CsvArgs a;
     for (int i=1; i<argc; ++i) {
         std::string s = argv[i];
-        auto need = [&](int j){ if(i+1>=argc) throw std::runtime_error("Missing value for "+s); return std::string(argv[++i]); };
-        if (s=="--csv")      { a.csv_mode=true; a.csv_in=need(++i); }
-        else if (s=="--col") { a.col=std::stoi(need(++i)); }
-        else if (s=="--op")  { a.op=need(++i); }
-        else if (s=="--win") { a.W=std::stoi(need(++i)); }
-        else if (s=="--alpha"){ a.alpha=std::stof(need(++i)); }
-        else if (s=="--edge"){ a.edge_fill = (need(++i)=="nan" ? std::numeric_limits<float>::quiet_NaN() : std::stof(argv[i])); }
-        else if (s=="--out") { a.csv_out=need(++i); }
-        else if (s=="--thresh"){ a.threshold=std::stoi(need(++i)); }
+        auto need = [&](){ if(i+1>=argc) throw std::runtime_error("Missing value for "+s); return std::string(argv[++i]); };
+        if (s=="--csv")      { a.csv_mode=true; a.csv_in=need(); }
+        else if (s=="--col") { a.col=std::stoi(need()); }
+        else if (s=="--op")  { a.op=need(); }
+        else if (s=="--win") { a.W=std::stoi(need()); }
+        else if (s=="--alpha"){ a.alpha=std::stof(need()); }
+        else if (s=="--edge"){ a.edge_fill = (need()=="nan" ? std::numeric_limits<float>::quiet_NaN() : std::stof(argv[i])); }
+        else if (s=="--out") { a.csv_out=need(); }
+        else if (s=="--thresh"){ a.threshold=std::stoi(need()); }
     }
     return a;
 }
