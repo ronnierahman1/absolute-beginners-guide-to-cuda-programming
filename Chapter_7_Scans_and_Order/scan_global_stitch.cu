@@ -160,7 +160,6 @@ int main() {
 
     // 2) Copy block sums to host and build exclusive block offsets
 
-    // 2) Copy block sums to host and build exclusive block offsets
     std::vector<int> h_blockSums(GRID, 0);
     CUDA_CHECK(cudaMemcpy(h_blockSums.data(), d_blockSums,
                           GRID * sizeof(int), cudaMemcpyDeviceToHost));
